@@ -1,0 +1,457 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+/* HEADER */
+
+header {
+    height: 100px;
+    background-color: black;
+    padding: 0 50px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-transform: uppercase;
+    color: white;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.logo a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.logo a:hover {
+    color: #5a8ab9;
+}
+
+.menu a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0, 4s;
+}
+
+.mostrar-menu,
+.esconder-menu {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+.mostrar-menu {
+    order: 1;
+}
+
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover {
+    color: #5a8ab9;
+}
+
+#check {
+    display: none;
+}
+
+/* BODY */
+body {
+    background-image: linear-gradient(to top, #bdc3c7, #2c3e50);
+    width: 100%;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 768px) {
+
+    /* header */
+
+    .mostrar-menu,
+    .esconder-menu {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2C5364;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+
+    .menu a {
+        display: block;
+        padding: 20px;
+    }
+
+    .esconder-menu {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    #check:checked .menu {
+        right: 0;
+    }
+
+}
+
+/* FOOTER */
+
+
+.container-fluid .h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+/* BOTÓN DE WHATSAPP*/
+
+.container-boton {
+    position: fixed;
+    border-radius: 50%;
+    z-index: 999;
+    bottom: 20px;
+    right: 25px;
+}
+
+.boton {
+    width: 80px;
+}
+
+/* INDEX */
+/* PRIMERA SECCIÓN */
+
+#banner {
+    padding: 0 50px;
+    background-image: url(/img/banner.jpg);
+    height: 45vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 45vh;
+    left: 0;
+}
+
+.contenido-banner h3 {
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 10 px 0px;
+}
+
+.contenido-banner {
+    position: relative;
+    color: whitesmoke;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-style: italic;
+}
+
+/* SEGUNDA SECCIÓN */
+
+.contenedorC {
+    width: 100%;
+    max-width: 1200px;
+    height: 430 px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 80px auto 80px auto;
+}
+
+.card {
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2 px 2 px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.contenedorC .card:hover {
+    transform: translate(15px, 15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contenedorC .card img {
+    width: 330px;
+    height: 220px;
+}
+
+.contenedorC .card h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+
+.contenedorC .card p {
+    color: black;
+    font-size: 14px;
+    font-family: 'Arimo', sans-serif;
+    margin: auto;
+}
+
+/* PAGINA DE CONTACTO */
+
+.containerContacto {
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+.containerContacto .p {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Arimo', sans-serif;
+
+}
+
+.formInput {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    padding: .8em 1em;
+    outline: none;
+    border: none;
+    border: 1px solid black;
+    border-radius: 0.2em;
+}
+
+.formCta {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    padding: .8em 1em;
+    outline: none;
+    border: none;
+    border: 1px solid black;
+    border-radius: 0.2em;
+}
+
+.form {
+    background-color: #bdc3c7;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 1em;
+    padding: 3.5em 1.5em;
+    margin: auto;
+}
+
+.formContainer {
+    width: 100%;
+    display: grid;
+    gap: 1em;
+    grid-auto-columns: 100%;
+}
+
+.formTitle {
+    text-align: center;
+    font-size: 1.9rem;
+    margin-bottom: .4em;
+}
+
+.formInput-message {
+    font-size: 1rem;
+    padding: .8em 1em;
+    outline: none;
+    border: none;
+    border: 1px solid black;
+    border-radius: 0.2em;
+}
+
+p {
+    margin-top: 100px;
+    color: white;
+    font-size: 30px;
+    font-family: 'Arimo', sans-serif;
+    text-align: center;
+}
+
+.subtituloContacto {
+    margin-bottom: auto;
+    padding: 50px;
+    font-size: 30px;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    font-style: italic;
+}
+
+.subtituloUbicacion {
+    margin-bottom: auto;
+    padding: 20px;
+    font-size: 30px;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    font-style: italic;
+}
+
+/* UBICACIÓN - MAPA */
+
+.ubicacion .mapa {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.ubicacion .mapa:hover {
+    filter: grayscale(70%);
+}
+
+/* PÁGINA PROPIEDADES */
+/* PRIMERA SECCIÓN */
+
+.contenedorA {
+    width: 100%;
+    max-width: 1200px;
+    height: 630 px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto 10px auto;
+}
+
+.cardB {
+    width: 430px;
+    height: 530px;
+    border-radius: 8px;
+    box-shadow: 0 2 px 2 px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    background-color: whitesmoke;
+}
+
+.contenedorA .cardB img {
+    width: 430px;
+    height: 320px;
+}
+
+.contenedorA .cardB h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px;
+    font-weight: bolder;
+    text-decoration: underline;
+    padding: 15px;
+
+}
+
+
+.contenedorA .cardB h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+.contenedorA .cardB p {
+    color: black;
+    font-size: 14px;
+    font-family: 'arimo', sans-serif;
+    margin: auto;
+    padding: 5px;
+    font-style: italic;
+
+}
+
+.contenedorA .cardB:hover {
+    transform: translate(15px, 15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.subtitulo {
+    margin-bottom: auto;
+    padding: 50px;
+    font-size: 30px;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    font-style: italic;
+}
+
+/* PÁGINA QUIENES SOMOS */
+/* BANNER */
+
+#bannerB {
+    padding: 0 50px;
+    background-image: url(/img/banner-4.jpeg);
+    height: 45vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#bannerB::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 45vh;
+    left: 0;
+}
+
+.contenidoQuienesSomos .subtituloNuestraEmpresa {
+    margin-bottom: auto;
+    padding: 50px;
+    font-size: 30px;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    font-style: italic;
+}
+
+.contenidoQuienesSomos .quienesSomos {
+    padding: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 17px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* PAGINA SERVICIOS */
+/* SUBTITULO */
+
+.subtituloServicios {
+    margin-bottom: auto;
+    padding: 50px;
+    font-size: 30px;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    font-style: italic;
+}
+
